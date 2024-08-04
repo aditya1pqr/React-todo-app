@@ -1,10 +1,14 @@
 import React from 'react'
 
-function Display2() {
+function Display2({taskName,dateName}) {
   return (
     <div>
-      Display2 
-    </div>
+      <div className="d-flex justify-content-between diplay">
+                 <div className="p-2">{taskName}</div>
+                 <div className="p-2">{dateName}</div>
+                 <div className="p-2"><button type="button" className="btn btn-danger del">Delete</button></div>
+     </div>        
+     </div>
   )
 }
 

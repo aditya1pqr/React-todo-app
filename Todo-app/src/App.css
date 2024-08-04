@@ -1,0 +1,27 @@
+h1{
+    margin: 40px 0px;
+    font-weight: 600;
+}
+.adddisplay{
+    width: 600px;
+    margin: 20px 0px;;
+}
+.delt{
+padding-left: 20px;
+}
+
+.diplay{
+ width: 600px;
+ margin: 20px 0px;
+ 
+}
+.diplay div{
+    margin-left: 20px;
+   
+}
+.del{
+   width: 95px;
+}
+input{
+    font-size: larger;
+}

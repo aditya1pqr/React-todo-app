@@ -1,6 +1,7 @@
 function TodoHeading() {
     return(
-        <h1>TODO APP</h1>
+        <>
+       <h1>Todo App</h1></>
     )
 
 }
