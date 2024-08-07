@@ -4,11 +4,9 @@ function AddTodo({onhandlechange}) {
   const [addvalue, setaddvalue] = useState("")
   const [adddate, setadddate] = useState("")
   const handleaddvalue = (event) =>{
-    console.log(event.target.value)
     setaddvalue(event.target.value)
   }
   const handledatevalue = (event) =>{
-    console.log(event.target.value)
     setadddate(event.target.value)
   }
 

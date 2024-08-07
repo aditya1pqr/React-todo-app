@@ -21,21 +21,23 @@ function App() {
 
 const [Tasks, settask] = useState(pretasks)
 
-const onhandlechange = (ad, add) =>{
-  console.log(ad);
-  console.log(add)
-
-  const newvalue = [...Tasks, {taskName:ad, dateName:add}]
+const onhandlechange = (value, date) =>{
+ 
+  const newvalue = [...Tasks, {taskName:value, dateName:date}]
   settask(newvalue)
 
 }
 
+const handledelete = (deletedtask)=>{
+  const newararyvalues = Tasks.filter((a)=>a.taskName !== deletedtask)
+  settask(newararyvalues)
+   }
 
   return (
     <center>
       <TodoHeading></TodoHeading>
       <AddTodo onhandlechange={onhandlechange}></AddTodo>
-      <Display1 tasks={Tasks}></Display1>
+      <Display1 tasks={Tasks} handledelete={handledelete}  ></Display1>
       
     </center>
   )
