@@ -5,9 +5,10 @@ import Display1 from './components/Display1'
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./App.css"
+import { useState } from 'react'
 
 function App() {
- const Tasks=[{
+ const pretasks=[{
   taskName: "get sugar",
   dateName:"04/12/23"
  },
@@ -18,10 +19,22 @@ function App() {
  }
 ]
 
+const [Tasks, settask] = useState(pretasks)
+
+const onhandlechange = (ad, add) =>{
+  console.log(ad);
+  console.log(add)
+
+  const newvalue = [...Tasks, {taskName:ad, dateName:add}]
+  settask(newvalue)
+
+}
+
+
   return (
     <center>
       <TodoHeading></TodoHeading>
-      <AddTodo></AddTodo>
+      <AddTodo onhandlechange={onhandlechange}></AddTodo>
       <Display1 tasks={Tasks}></Display1>
       
     </center>

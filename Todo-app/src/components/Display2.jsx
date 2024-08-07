@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Display2({taskName,dateName}) {
+function Display2({taskName,dateName, handledelete}) {
   return (
     <div>
       <div className="d-flex justify-content-between diplay">
